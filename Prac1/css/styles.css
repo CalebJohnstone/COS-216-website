@@ -1,0 +1,224 @@
+body {
+    margin: 0;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+::selection{
+    color: blue;
+    background-color: white;
+}
+
+#logo{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: 60px;
+    width: 280px;
+    border-radius: 50px;
+}
+
+#topnav{
+    background-color: black;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#topnav a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    width: 20%;
+    height: 45px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-family: fantasy;
+}
+
+#topnav > a img{
+    width: 15%;
+}
+
+#topnav .active{
+    background-color: red;
+}
+
+#topnav a:hover{
+    background-color: red;
+}
+
+#topnav:first-child:hover{
+    background-color: black !important;
+}
+
+#welcome{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 80px;
+}
+
+#helloBlock{
+    position: absolute;
+    top: 280px;
+    left: 0px;
+    display: inline-flex;
+}
+
+#glad{
+    width: 50%;
+    height: 600px;
+}
+
+#explore{
+    width: 50%;
+}
+
+#constructionImage{
+    margin-top: 85px;
+    width: 100%;
+}
+
+#coverBar{
+    position: fixed;
+    bottom: 0px;
+    height: 30px;
+    width: 100%;
+    background-color: black;
+}
+
+#searchBar div{
+    display: inline;
+}
+
+#searchBar{
+    padding: 10px;
+    padding-left: 15px;
+    background-color: black;
+    position: fixed;
+    top: 85px;
+    width: 100%;
+    z-index: 1;
+}
+
+#searchBar input{
+    width: 90%;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#searchBar button{
+    height: 47px;
+    width: 7%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#searchFilter{
+    padding-left: 20px;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 152px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    z-index: 1;
+}
+
+#searchFilter h3{
+    display: inline;
+}
+
+.song, .featuredSong{
+    margin-left: 55px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+    border: 5px solid black;
+    background-color: black;
+    border-radius: 25px;
+    box-shadow: 20px 20px 20px;
+    height: 350px;
+    width: 90%;
+}
+
+.songSection{
+    position: relative;
+    top: 150px;
+    z-index: 0;
+
+    margin-bottom: 50px;
+}
+
+.featuredSong{
+    height: 1000px;
+}
+
+.featuredSong iframe{
+    height: 650px;
+    width: 95%;   
+}
+
+.song p, .featuredSong p{
+    padding-top: 10px;
+    color: white;
+    font-weight: 800;
+    text-align: center;
+}
+
+.song p{
+    font-size: 28px;
+}
+
+.featuredSong p{
+    font-size: 33px;
+}
+
+.song img, .featuredSong img{
+    height: 240px;
+    width: 240px;
+    margin: 30px;
+    border-radius: 25%;
+    box-shadow: 8px 8px 5px white;
+}
+
+.song .album, .featuredSong .album{
+    float: right;
+}
+
+.song .artist, .featuredSong .artist{
+    float: left;
+}
+
+.checked{
+    color: red;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    color: red;
+    padding-left:520px;
+    text-align: center;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 20px;
+    padding: 30px;
+    position: absolute;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
