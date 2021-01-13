@@ -1,0 +1,759 @@
+body {
+    --black: black;
+    --white: white;
+
+    margin: 0;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-y: scroll;
+    /*overflow-x: hidden;*/
+}
+
+::selection{
+    color: blue;
+    background-color: var(--white);
+}
+
+#logo{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: 60px;
+    width: 280px;
+    border-radius: 50px;
+}
+
+#topnav{
+    background-color: var(--black);
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#topnav a{
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    width: 12%;
+    height: 65px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-family: fantasy;
+}
+
+#topnav > a img{
+    width: 10%;
+}
+
+#topnav .active{
+    background-color: red;
+}
+
+#topnav a:hover{
+    background-color: red;
+}
+
+#welcome{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 80px;
+}
+
+#helloBlock{
+    position: absolute;
+    top: 280px;
+    left: 0px;
+    display: inline-flex;
+}
+
+#glad{
+    width: 50%;
+    height: 600px;
+}
+
+#explore{
+    width: 50%;
+}
+
+#constructionImage{
+    position: fixed;
+    margin-top: 60px;
+    width: 100%;
+}
+
+#coverBar{
+    position: fixed;
+    bottom: 0px;
+    height: 30px;
+    width: 100%;
+    background-color: var(--black);
+}
+
+#searchBar div{
+    display: inline;
+}
+
+#searchBar{
+    padding: 10px;
+    padding-left: 15px;
+    background-color: var(--black);
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    z-index: 1;
+}
+
+#searchBar input{
+    width: 90%;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#searchBar #reloadBtn, #clearGenreBtn, #clearYearBtn{
+    height: 47px;
+    width: 7%;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px red;
+    vertical-align: middle;
+}
+
+#clearGenreBtn , #clearYearBtn{
+    margin-top: 2px;
+    height: 40px;
+}
+
+#searchFilter{
+    padding-left: 20px;
+    padding-bottom: 15px;
+    position: fixed;
+    top: 162px;
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+    z-index: 1;
+}
+
+#searchFilter h3{
+    display: inline;
+}
+
+#filterFields select{
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px red;
+    outline: none;
+}
+
+#filterFields label
+{
+    color: var(--white);
+    padding-left: 20px;
+}
+
+.song, .featuredSong, #noSongMessage{
+    margin-left: 55px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+    border: 5px solid var(--black);
+    background-color: var(--black);
+    border-radius: 25px;
+    box-shadow: 20px 20px 20px;
+    height: 450px;
+    width: 90%;
+    margin-right: 0px;
+}
+
+.songSection{
+    position: relative;
+    top: 200px;
+    z-index: 0;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+#topRatedSongs {
+    top: 70px;
+}
+
+.featuredSong{
+    margin-top: 70px;
+    height: 500px;
+}
+
+.featuredSong iframe{
+    height: 450px;
+    width: 95%;   
+}
+
+.song p, .featuredSong p{
+    padding-top: 10px;
+    color: var(--white);
+    font-weight: 800;
+    text-align: center;
+}
+
+.song p{
+    font-size: 35px;
+}
+
+.featuredSong p{
+    font-size: 33px;
+}
+
+.song img, .featuredSong img{
+    height: 240px;
+    width: 240px;
+    margin: 30px;
+    border-radius: 25%;
+    box-shadow: 8px 8px 5px var(--white);
+}
+
+.song .album, .featuredSong .album{
+    float: right;
+}
+
+.song .artist, .featuredSong .artist{
+    float: left;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    color: red;
+    margin-top: 30px;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: var(--white);
+    color: var(--black);
+    text-align: center;
+    border-radius: 20px;
+    padding: 30px;
+    position: absolute;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+#loadScreen{
+    position: fixed;
+    left: 0px;
+    top: 191px;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+    top: 85px;
+}
+
+#calendar
+{
+    z-index: 0;
+    position: absolute;
+    top: 120px;
+    left: 30px;
+    color: var(--white);
+    background-color: var(--black);
+    width: 95%;
+    height: 85%;
+    table-layout: fixed;
+    margin-bottom: 30px;
+}
+
+#calendar, th, td
+{
+    border: 2px solid var(--black);
+    border-radius: 10px;
+    box-shadow: 0 0 20px red;
+    padding: 10px;
+    color: var(--white);
+}
+
+#calendar th
+{
+    font-size: 40px;
+    font-family: fantasy;
+    height: 100px;
+    padding-bottom: 20px;
+    color: var(--white);
+}
+
+#calendar td
+{
+    vertical-align: top;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--white);
+    height: 150px;
+}
+
+
+#calendar button
+{
+    position: absolute;
+    top: 30px;
+    width: 170px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 5px red;
+}
+
+button
+{
+    outline: none;
+    border: none;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px red;
+}
+
+#today
+{
+    right: 210px;
+}
+
+#previous
+{
+    left: 20px;
+}
+
+#next
+{
+    right: 30px;
+}
+
+#export
+{
+    left: 200px;
+}
+
+.featuredAudio
+{
+    vertical-align: middle;
+    outline: none;
+    margin-top: 30px;
+}
+
+#noSongMessage
+{
+    height: 80px;
+}
+
+#noSongMessage p
+{
+    color: var(--white);
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.signUpHeading
+{
+    background-color: var(--black);
+    color: var(--white);
+    position: fixed;
+    top: 110px;
+    left: 43.5%;
+}
+
+form
+{
+    position: fixed;
+    top: 210px;
+    left: 200px;
+    color: var(--white);
+    background-color: var(--black);
+    padding: 50px;
+    height: 500px;
+    width: 800px;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.signUpHeading, form
+{
+    border: 20px solid var(--black);
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--white);
+    padding: 10px;
+}
+
+form button
+{
+    width: 170px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 5px red;
+    margin-top: 30px;
+}
+
+form input[type="text"], form input[type="password"]{
+    width: 50%;
+}
+
+#seePswdLogin{
+    position: absolute;
+    right: 15px;
+    top: 130px;
+}
+
+#seePswdSignUp{
+    position: absolute;
+    right: 15px;
+    top: 320px;
+}
+
+.footer{
+    background-color: var(--black);
+    position: relative;
+    bottom: -100px;
+    width: 100%;
+    z-index: 1;
+    color: var(--white);
+    height: 120px;
+}
+
+#google_translate_element, .skiptranslate.goog-te-gadget{
+    color: var(--white);
+    position: absolute;
+    margin-left: 190px;
+    font-size: 20px;
+    outline: none;
+}
+
+.skiptranslate.goog-te-gadget{
+    margin-left: 140px;
+    margin-top: 12.5px;
+    height: 100px;
+    width: 100px;
+}
+
+body > .skiptranslate {
+    display: none;
+}
+
+.goog-logo-link img{
+    height: 50px;
+    width: 50px;
+}
+
+.goog-te-combo{
+    width: 220px;
+    outline: none;
+
+    color: var(--black);
+    background-color: var(--white);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px red;
+}
+
+.goog-te-combo:hover {
+    background-color: red;
+}
+
+
+.goog-te-combo option{
+    color: var(--black);
+    background-color: var(--white);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.goog-te-combo:hover {
+    display: block;
+}
+
+.dropbtn{
+    background-color: var(--white);
+    color: var(--black);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px red;
+}
+  
+.dropup {
+    position: absolute;
+    margin-left: 190px;
+    display: inline;
+    top: 15px;
+}
+  
+.dropup-content {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropup-content a {
+    color: var(--white);
+    background-color: var(--black);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropup-content a:hover {
+    background-color: rgb(255, 0, 34);
+    
+}
+  
+.dropup:hover .dropup-content {
+    display: block;
+}
+
+.dropup:hover .dropbtn {
+    background-color: red;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+  
+#content-wrap {
+    padding-bottom: 2.5rem;
+}
+
+#datesArray{
+    visibility: hidden;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: var(--black);
+    overflow-x: hidden;
+    padding-top: 60px; 
+    transition: 0.5s; 
+
+    color: var(--white);
+  }
+
+  .sidebar * {
+    position: absolute;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--black);
+    background-color: var(--white);
+    padding: 0px 15px;
+    z-index: 2;
+
+    top: 0px;
+    width: 150px;
+    height: 60px;
+  }
+
+  .openbtn:hover {
+    background-color: red;
+  }
+  
+  #sideBarOpenBtn {
+    transition: margin-left .5s;
+    padding: 20px;
+    z-index: 2;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+  .sidebar > div{
+      padding-left: 25px;
+  }
+
+  .settingsBlock h2{
+    top: 80px;
+  }
+
+  h4 {
+      position: fixed;
+      top: 0px;
+      left: 120px;
+      margin-top: 15px;
+  }
+
+  #filterOptions select{
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px red;
+    outline: none;
+
+    margin-bottom: 10px;
+    margin-left: 10px;
+    left: 70px;
+  }
+
+  label[for=genreSave], #genreSave, #clearGenreSave {
+    top: 160px;
+  }
+
+  #clearGenreSave {
+    top: 155px;
+  }
+
+  label[for=yearSave], #yearSave {
+      top: 200px;
+  }
+
+  #clearYearSave {
+    top: 195px;
+  }
+
+  .genre, .year{
+      display: none;
+  }
+
+  #clearGenreSave, #clearYearSave {
+      left: 350px;
+  }
+
+  #sortBlock {
+      position: absolute;
+      top: 300px;
+
+  }
+
+  #sortOptions {
+      position: relative;
+      top: 80px;
+      display: inline;
+  }
+
+  #sortOptions label {
+      left: 20px;
+  }
+
+  #artistSort * {
+      top: 5px;
+  }
+
+  #artistSort label {
+      top: 2px;
+  }
+
+  #titleSort * {
+      top: 35px;
+  }
+
+  #titleSort label {
+      top: 32px;
+  }
+
+  #albumSort * {
+      top: 40px;
+  }
+
+  #albumSort label {
+      top: 37px;
+  }
+
+  #clearSort {
+      top: 25px;
+      left: 120px;
+  }
+
+  #saveSettings {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+  }
+
+  .slideContainer * {
+    width: 100%; /* Width of the outside container */
+    display: inline;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 15px;
+    border-radius: 5px;  
+    background-color: var(--white);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: red;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+  }
