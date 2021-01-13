@@ -1,6 +1,5 @@
 COS 216 - Practical Assignment 2
 Name: Caleb Johnstone
-Student Number: u19030119
 
 ======================================================================================================================================================================================
 CORS plug-in: Moesif CORS -> needed as some pages source from Deezer => https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc
