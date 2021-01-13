@@ -1,6 +1,5 @@
 COS 216 - Practical Assignment 4
 Name: Caleb Johnstone
-Student Number: u19030119
 
 The ReadMe.txt details for practical 3 has been added to in this ReadMe.txt to ensure that marker does not have to go back to that one to check some detail
 of practical 3.
