@@ -1,6 +1,5 @@
 COS 216 - Practical Assignment 3
 Name: Caleb Johnstone
-Student Number: u19030119
 
 -----------------------------------------------------------------I WANT TO BE MARKED ON WHEATLEY--------------------------------------------------------------------------------------
 
