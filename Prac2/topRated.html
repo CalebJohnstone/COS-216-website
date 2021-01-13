@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+  <head>
+    <title>Top Rated</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="topRated.js"></script>
+    <link rel="icon" sizes="180x180" href="images/logo.png">
+
+    <style>
+      body
+      {
+        background-image: url("images/background.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div id="topnav">
+      <a href="launchPage.html"><img id="logo" alt="RED PILL MUSIC" src="images/logo.png"></a>
+      <a href="trending.html">Trending</a>
+      <a href="newReleases.html">New Releases</a>
+      <a class="active" href="topRated.html">Top Rated</a>
+      <a href="featured.html">Featured</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="tour.html">Tour</a>
+    </div>
+
+    <div id="searchBar">
+      <input type="text" id="searchTerm" placeholder="search for what you want">
+      <button type="button" onclick="clearSearch();" id="reloadBtn">Clear</button>
+    </div>
+    
+    <div id="searchFilter">
+      <h3>Sort according to:</h3>
+      <input type="radio" name="searchFilter" onclick="determineOperations()" value="artist">Artist
+      <input type="radio" name="searchFilter" onclick="determineOperations()" value="title">Song Title
+      <input type="radio" name="searchFilter" onclick="determineOperations()" value="album">Album
+
+      <button type="button" id="clearSortBtn" onclick="clearSort()">Clear</button>
+
+      <div id="filterFields">
+        <h3>Filter: </h3>
+        <label for="genreSelect">Genre</label>
+        <select id="genreSelect" onchange="determineOperations()"></select>
+        <button type="button" id="clearGenreBtn" onclick="clearGenreFilter()">Clear</button>
+
+        <label for="yearSelect">Year</label>
+        <select id="yearSelect" onchange="determineOperations()"></select>
+        <button type="button" id="clearYearBtn" onclick="clearYearFilter()">Clear</button>
+      </div>
+    </div> 
+
+    <img id="loadScreen" alt="loading" src="animations/Eclipse-1s-200px.svg">
+
+   </body>
+</html>
